@@ -1,3 +1,12 @@
+
+Level 1.
+
+Найти индекс заданного числа в массиве: {3, 6, 4, 7, 2, 1, 9}
+Алгоритм на вход должен получать любой массив и одну цифру, индекс которой требуется найти.
+Задание считается выполненным если: использован ”Линейный подход” и алгоритм соответствует характеристикам алгоритма и выдает верный результат.
+
+version with pseudocode
+-----------------------
 START
 INPUT: array, target
 FOR i from 0 to length of array - 1 DO
@@ -7,6 +16,9 @@ END FOR
 RETURN -1
 END
 
+
+js version 
+-----------
 
 const array = [3, 6, 4, 7, 2, 1, 9];
 const number = 7;
@@ -27,3 +39,30 @@ if (index === -1) {
 } else {
   console.log(`Index of number ${number} is ${index}`);
 }
+
+
+
+level 2
+
+version with pseudocode
+-----------------------
+START
+INPUT array,sum = 0
+FOR each element in array DO
+    sum = sum + element^2
+END FOR
+RETURN sum
+END
+
+
+
+js version
+----------
+
+const arr = [3, 6, 4, 7, 2, 1, 9];
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+  sum += arr[i] ** 2;
+}
+console.log(sum);
+
