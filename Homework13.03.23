@@ -1,0 +1,29 @@
+START
+INPUT: array, target
+FOR i from 0 to length of array - 1 DO
+    IF array[i] equals target THEN
+       RETURN i
+END FOR
+RETURN -1
+END
+
+
+const array = [3, 6, 4, 7, 2, 1, 9];
+const number = 7;
+
+function findIndex(arr, num) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === num) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+const index = findIndex(array, number);
+
+if (index === -1) {
+  console.log(`Number ${number} was not found in the array`);
+} else {
+  console.log(`Index of number ${number} is ${index}`);
+}
